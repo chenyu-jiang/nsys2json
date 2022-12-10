@@ -1,6 +1,11 @@
 # nsys2json
 
-A Python script to convert the output of NVIDIA Nsight Systems (in SQLite format) to JSON in [Google Chrome Trace Event Format](https://docs.google.com/document/d/1CvAClvFfyA5R-PhYUmn5OOQtYMH4h6I0nSsKchNAySU/preview#) for more customizable visualization and analysis. Inspired and adapted from [nvprof2json](https://github.com/ezyang/nvprof2json).
+<p align="center"><img width="836" alt="nsys2json_screenshot" src="https://user-images.githubusercontent.com/22335566/206858627-e8d1e92d-d096-493a-9c94-3da2d8a79734.png"></p>
+
+
+A Python script to convert the output of NVIDIA Nsight Systems (in SQLite format) to JSON in [Google Chrome Trace Event Format](https://docs.google.com/document/d/1CvAClvFfyA5R-PhYUmn5OOQtYMH4h6I0nSsKchNAySU/preview#) for more customizable visualization and analysis. To view the resulting json file, goto ```chrome://tracing``` in Google Chrome or use [Perfetto](https://ui.perfetto.dev/).
+
+Inspired and adapted from [nvprof2json](https://github.com/ezyang/nvprof2json).
 
 The SQLite schema used by Nsight Systems is documented [here](https://docs.nvidia.com/nsight-systems/UserGuide/index.html#exporter-sqlite-schema).
 
