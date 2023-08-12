@@ -17,10 +17,13 @@ To extract kernel activities and NVTX annotated regions (e.g. [torch.cuda.nvtx.r
 python3 nsys2json.py <nsys_sqlite_file> -o <output_json>
 ```
 
-To filter out only kernel activities or NVTX annotated regions, use:
+To filter out kernel activities or NVTX annotated regions, use:
 ```bash
--activity-type {kernel,nvtx}
+-activity-type {kernel, nvtx-cpu, nvtx-kernel}
 ```
+* `kernel`: Raw CUDA kernel activities
+* `nvtx-cpu`: NVTX annotated regions on CPU threads
+* `nvtx-kernel`: NVTX annotated regions, but calculate the start and end time from CUDA kernel activities launched within the region
 
 To filter NVTX regions based on name, use:
 ```bash

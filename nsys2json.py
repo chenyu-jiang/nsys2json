@@ -306,7 +306,7 @@ def nsys2json():
     for activity in args.activity_type:
         if activity == "kernel":
             parse_cupti_kernel_events(conn, strings, traceEvents)
-        elif activity == "nvtx":
+        elif activity == "nvtx-cpu":
             parse_nvtx_events(conn, traceEvents, event_prefix=args.nvtx_event_prefix, color_scheme=args.nvtx_color_scheme)
         elif activity == "nvtx-kernel":
             parse_nvtx_kernel_events(conn, strings, traceEvents, event_prefix=args.nvtx_event_prefix, color_scheme=args.nvtx_color_scheme)
