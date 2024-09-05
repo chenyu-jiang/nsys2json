@@ -315,7 +315,7 @@ def parse_all_events(conn: sqlite3.Connection, strings: dict, activities=None, e
     if ActivityType.NVTX_KERNEL in activities:
         for nvtx_event, (kernel_start_time, kernel_end_time) in nvtx_kernel_event_map.items():
             event = {
-                "name": nvtx_event["text"],
+                "name": nvtx_event["text"] or "",
                 "ph": "X", # Complete Event (Begin + End event)
                 "cat": "nvtx-kernel",
                 "ts": munge_time(kernel_start_time),
