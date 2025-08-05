@@ -14,7 +14,7 @@ The SQLite schema used by Nsight Systems is documented [here](https://docs.nvidi
 
 To extract kernel activities and NVTX annotated regions (e.g. [torch.cuda.nvtx.range](https://pytorch.org/docs/stable/generated/torch.cuda.nvtx.range_push.html)):
 ```bash
-python3 nsys2json.py <nsys_sqlite_file> -o <output_json>
+python3 nsys2json.py -f <nsys_sqlite_file> -o <output_json>
 ```
 
 To filter out kernel activities or NVTX annotated regions, use:
